@@ -16,12 +16,12 @@ export const ProductItem: FC<IProductItem> = ({ product }) => {
   const [count, setCount] = useState(1);
   const dispatch = useDispatch();
   const handlerAddBasket = () => {
-    dispatch(addToCart(product, count));
+    dispatch(addToCart({product, count}));
   };
 
   return (
     <Item>
-      <LinkWrap to={`/${product.id}`} ket={product.id}>
+      <LinkWrap to={`/${product.id}`} key={product.id.toString()}>
         <ImgWrap>
           <ImgItem src={product.imagePath} alt={product.name} />
         </ImgWrap>
@@ -93,7 +93,7 @@ const RubleImgMainPage = styled.img`
 const Button = styled.button`
   display: flex;
   justify-content: center;
-  align-items: top;
+  align-items: flex-start;
   border-radius: 30px;
   border: none;
   width: 35px;

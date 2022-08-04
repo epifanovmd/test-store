@@ -1,23 +1,6 @@
 import { IProduct } from "../../types";
 
-export enum actionTypes {
-  CART_ADD_ITEM = "CART_ADD_ITEM",
-  CART_REMOVE_ITEM = "CART_REMOVE_ITEM"
-}
-
-interface ICartAddItemPayload {
+export interface ICartAddItemPayload {
   product: IProduct;
   count: number;
 }
-
-interface ICartAddItem {
-  type: actionTypes.CART_ADD_ITEM;
-  payload: ICartAddItemPayload;
-}
-
-interface ICartRemoveItem {
-  type: actionTypes.CART_REMOVE_ITEM;
-  payload: number;
-}
-
-export type TypeActionCart = ICartAddItem | ICartRemoveItem;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputForm = ({ search, handleSearch }) => {
+export const InputForm = ({ search, handleSearch }: any) => {
   return (
     <Input
       type="text"

@@ -10,7 +10,7 @@ import { removeFromCart } from "../store/cart/actions";
 
 export const Basket = () => {
   const [isShowCart, setIsShowCart] = useState(false);
-  const cart = useTypedSelector((state) => state.cart);
+  const cart = useTypedSelector((state) => state.cart.data);
   const total = cart.reduce((acc, item) => acc + item.price, 0);
 
   const dispatch = useDispatch();

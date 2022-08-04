@@ -2,7 +2,7 @@ import styled from "styled-components";
 import leftArrow from "../assets/leftArrow.png";
 import rightArrow from "../assets/rightArrow.png";
 
-export const Footer = ({ prevPage, nextPage }) => {
+export const Footer = ({ prevPage, nextPage }: any) => {
   return (
     <Wrap>
       <Button onClick={prevPage}>

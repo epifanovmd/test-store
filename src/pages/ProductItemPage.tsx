@@ -5,7 +5,7 @@ import { product } from "../components/Products";
 
 export const ProductItemPage = () => {
   const params = useParams();
-  const productID = params.id - 1;
+  const productID = +(params.id || 0) - 1;
   const props = product[productID];
 
   const navigate = useNavigate();
